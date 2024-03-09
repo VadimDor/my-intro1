@@ -40,4 +40,4 @@ jobs:
           #  -f key_id='012345678912345678'
           echo "Configured secret METRICS_TOKEN"
           ls -a
-          setup.sh
+          setup.bash
