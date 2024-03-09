@@ -40,7 +40,8 @@ jobs:
           #  -f key_id='012345678912345678'
           echo "Configured secret METRICS_TOKEN"
           echo $(ls -a ../my-intro1)
-          echo $(ls -a ../../my-intro1)          
-          echo $(ls -a ../.)       
-          echo $(ls -a /home)          
-          /setup.bash
+          ls -a ../../my-intro1       
+          ls -a ../.      
+          ls -a /home     
+          chmod u+x setup.bash
+          ./setup.bash
