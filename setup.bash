@@ -129,7 +129,7 @@ setup_git() {
 	
 
 	# ask for arguments not given via CLI
-	plugin_name="${2:-$(ask_for "$HELP_PLUGIN_NAME")}"
+	plugin_name="${2:-$(ask_for "$HELP_PLUGIN_NAME" "haha")}"
 
 	tool_name="${plugin_name/asdf-/}"
     # echo ${tool_name%-*} #openssl-9 -> openssl
@@ -175,7 +175,7 @@ setup_git() {
 		template using the above information. Please ensure all seems correct.
 	EOF
 
-	ok="${9:-$(ask_for "Type \`yes\` if you want to continue:")}"
+	ok="${9:-$(ask_for "Type \`yes\` if you want to continue:" "yes")}"
 	if [ "yes" != "$ok" ]; then
 		printf "Nothing done.\n"
 	else
