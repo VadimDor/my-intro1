@@ -47,5 +47,5 @@ jobs:
           #chmod u+x setup.bash
       - name: Run setup
         run: |      
-          bash .github/setup.bash
+          bash .github/setup.sh
           
