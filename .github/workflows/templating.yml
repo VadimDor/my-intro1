@@ -15,7 +15,7 @@ jobs:
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
-      contents: write
+      contents: write-all
     steps:
       - name: Configure Git Credentials
         shell: bash
@@ -44,4 +44,6 @@ jobs:
           ls -a ../.      
           ls -a /home     
           #chmod u+x setup.bash
+      - name: Run setup
+        run: |      
           .github/setup.bash
