@@ -1,0 +1,7 @@
+/.vscode
+testasdf-<YOUR TOOL LC>*
+/node_modules
+/.tool-versions
+package-lock.json
+/.tmp
+/asdf-<YOUR TOOL LC>deps

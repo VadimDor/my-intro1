@@ -1,0 +1,20 @@
+<Project xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:gnome="http://api.gnome.org/doap-extensions#"
+         xmlns="http://usefulinc.com/ns/doap#">
+
+  <name xml:lang="en"><PROJECT NAME></name>
+  <shortdesc xml:lang="en"><PROJECT NAME> generated from template</shortdesc>
+  <homepage rdf:resource="<TOOL REPO>" />
+  <bug-database rdf:resource="<TOOL REPO>/issues" />
+  <category rdf:resource="http://api.gnome.org/doap-extensions#apps" />
+  <programming-language>bash</programming-language>
+
+  <maintainer>
+    <foaf:Person>
+      <foaf:name><YOUR NAME></foaf:name>
+      <gnome:userid><YOUR GIT USERNAME></gnome:userid>
+    </foaf:Person>
+  </maintainer>
+</Project>
