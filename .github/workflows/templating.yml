@@ -46,6 +46,8 @@ jobs:
           ls -a /home     
           #chmod u+x setup.bash
       - name: Run setup
-        run:  ./my-intro1/.github/setup.sh
+        run: |
+         ls -l
+         ./my-intro1/.github/setup.sh
         shell: bash
           
