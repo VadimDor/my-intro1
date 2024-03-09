@@ -10,8 +10,8 @@ jobs:
     # Don't run this in the template repo or more than once in the forked repo
     if: ${{ github.repository != 'VadimDor/intro-GH-template' && '[ -d "template" ]' }}
     runs-on: ubuntu-latest
-    environment:
-      name: repo-metrics    
+    #environment:
+    #  name: repo-metrics    
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
@@ -23,7 +23,7 @@ jobs:
           username: ${{ github.repository_owner }}
           email: V.Dorez@mail.ru
           repo_name: ${{ github.event.repository.name }}
-          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}          
+          #GH_TOKEN: ${{ secrets.METRICS_TOKEN }}          
         run: |
           git config --global user.name "$username"
           git config --global user.email "$email"
@@ -38,10 +38,10 @@ jobs:
           #  /repos/$username/$repo_name/actions/secrets/METRICS_TOKEN \
           #  -f encrypted_value='c2VjcmV0' \
           #  -f key_id='012345678912345678'
-          echo "Configured secret METRICS_TOKEN"
-          echo $(ls -a ../my-intro1)
-          ls -a ../../my-intro1       
+          #echo "Configured secret METRICS_TOKEN"
+          echo $(ls -a ../my-intro1/)
+          ls -a ../../my-intro1/      
           ls -a ../.      
           ls -a /home     
-          chmod u+x setup.bash
+          #chmod u+x setup.bash
           ./setup.bash
