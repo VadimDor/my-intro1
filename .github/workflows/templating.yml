@@ -28,7 +28,7 @@ jobs:
           git config --global user.name "$username"
           git config --global user.email "$email"
           git config --global init.defaultBranch main
-          git config --global --add safe.directory "/__w/$repo_name/$repo_name"
+          # vgit config --global --add safe.directory "/__w/$repo_name/$repo_name"
           echo "Configured Git Credentials"
           # GitHub CLI api see https://cli.github.com/manual/gh_api
           #gh api \
@@ -42,5 +42,5 @@ jobs:
           echo $(ls -a ../my-intro1)
           echo $(ls -a ../../my-intro1)          
           echo $(ls -a ../.)       
-          echo $(ls -a /)          
-          ../my-intro1/setup.bash
+          echo $(ls -a /home)          
+          /setup.bash
