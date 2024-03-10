@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     #environment:
     #  name: repo-metrics    
-    ##permissions:
+    permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
       # added or changed files to the repository.
-      ##contents: write-all
-    permissions: write-all      
+      contents: write
+    #permissions: write-all      
     steps:
       - name: Configure Git Credentials
         shell: bash
@@ -24,6 +24,7 @@ jobs:
           username: ${{ github.repository_owner }}
           email: V.Dorez@mail.ru
           repo_name: ${{ github.event.repository.name }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           #GH_TOKEN: ${{ secrets.METRICS_TOKEN }}          
         run: |
           git config --global user.name "$username"
